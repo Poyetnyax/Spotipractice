@@ -11,6 +11,7 @@
   color: white;
   display:flex;
   position: relative;
+  z-index: 999999;
   align-items: center;
   padding: 0 100px;  
 }
@@ -88,7 +89,8 @@ transform: scale(1.1);
   flex-direction: column;
 }
 .sectext{
-  width: 670px;
+  max-width: 670px;
+  display: flex;
   height: 92px;
   align-self: center;
   text-align: center;
@@ -167,9 +169,10 @@ transform: scale(1.1);
   padding: 10px;
 }
 .card-container{
-  width: 1140px;
+  max-width: 1140px;
   align-self: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: space-around;
   margin: 50px 0 26px;
@@ -242,13 +245,14 @@ transform: scale(1.1);
   flex-direction: column;
 }
 .footer-content{
-  width: 1140px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-self: center;
-  padding: 50px 0 0;
+  padding: 50px 60px 0;
   gap: 10px;
-  color:white ;
+  color:white;
+  margin: 0 auto;
 }
 .item-I{
   width: 195px;
@@ -293,29 +297,26 @@ transform: scale(1.1);
   color: #1ed760;
 }
 .f-mid{
-  width: 1140px;
-  color: grey;
-  align-self: center;
-  font-size: 12px;
-  height: 20px;
-  padding-bottom: 30px;
+font-size: 12px;
+margin:0 250px;
+color: grey;
 }
 .location{
-  width: fit-content;
-  position: absolute;
-  right: 88px;
+  float: right;
+  max-width: fit-content;
 }
-.location a{
-  color: grey;
+.location a{ 
   text-decoration: none;
+  color: grey;
 }
-.location a:hover{
+
+.f-mid a:hover{
   color: #1ed760;
 }
 .f-base{
-  width: 1140px;
   display: flex;
-  align-self: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding:0 0 50px;
   font-size: 12px;  
@@ -330,4 +331,7 @@ transform: scale(1.1);
 .c-right{
   position: absolute;
   right: 88px;
+}
+.f-base> :nth-child(7){
+  margin-left: 25%;
 }
