@@ -12,21 +12,25 @@
   display:flex;
   position: relative;
   align-items: center;
-  justify-content: space-around;
+  padding: 0 100px;  
 }
 .logo img{
-  width: 150px;
+  width: 135px;
 }
-.navlinks{
-justify-content: space-between;
+.logo {
+  flex: 1;
 }
-.navlink{
+.navlinks {
+  display: flex;
+  gap: 40px;
+}
+.navlink {
   color: white;
-  padding: 10px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: bold;
 }
-.navlink:hover{
+.navlink:hover {
 color: #1ed760;
 }
 
