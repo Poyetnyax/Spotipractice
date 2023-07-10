@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>LogIn</title>
+  </head>
+  <body>
+    <nav class="headContainer">
+      <div class="head">
+        <img src="Spotify_Logo_RGB_White.png" alt="" class="headIcon">
+      </div>
+    </nav>
+
+    <section class="loginBox">
+      <div class="loginContainer">
+       
+          <div class="loginHead">
+            <h1>Log in to Spotify</h1>
+          </div>
+          <div class="logLinks">
+            <div class="btnLink">
+              <button class="logGoogleLink"
+                onclick="loginGoogle();
+                ">Continue with Google</button>
+              <span class="googleIcon"><img src="new-google-icon.72fd940a229bc94cf9484a3320b3dccb.svg" alt=""></span>
+            </div>
+            <div class="btnLink">
+              <button class="logFacebookLink" onclick="
+                loginFacebook();
+                ">Continue with Facebook</button>
+              <span class="facebookIcon"><img src="new-facebook-icon.eae8e1b6256f7ccf01cf81913254e70b.svg" alt=""></span>
+            </div>  
+            <div class="btnLink">
+              <button class="logAppleLink" onclick="
+                loginApple();
+                ">Continue with Apple</button>
+              <span class="appleIcon"><img src="new-apple-icon.e356139ea90852da2e60f1ff738f3cbb.svg" alt=""></span>
+            </div>      
+          </div>
+          
+          
+          <div class="loginBody">
+            <form action="" method="get">
+            <label for="login-username">Email or username</label><br>
+            <input type="text" name="username" class="jsUsername" placeholder="Email or username" required><br><br>
+            <label for="login-password">Password</label><br>
+            <input type="password" name="password" class="jsPassword" placeholder="Password" required><br><br>
+            <p class="loginDetails"></p>
+            <button class="btnLogin" onclick="
+              loginDetails();
+              ">Log In</button>
+            <a href=""><p>Forgot your password?</p></a>
+            
+          </div>
+          
+          <div class="loginFooter">
+    
+          </div>
+        </form>
+        
+      </div>
+      
+    </section>
+
+    <script>
+
+      function loginGoogle() {
+        const buttonGoogleElement = document.querySelector('.logGoogleLink');
+
+        if (buttonGoogleElement.innerText === 'Continue with Google') {
+          buttonGoogleElement.innerHTML = 'Logged in with Google';
+          buttonGoogleElement.classList.add('loggedIn');
+        } else {
+          buttonGoogleElement.innerHTML = 'Continue with Google';
+          buttonGoogleElement.classList.remove('loggedIn');
+        }
+      }  
+
+      function loginFacebook() {
+        const buttonFacebookElement = document.querySelector('.logFacebookLink');
+
+        if (buttonFacebookElement.innerText === 'Continue with Facebook') {
+          buttonFacebookElement.innerHTML = 'Logged in with Facebook';
+          buttonFacebookElement.classList.add('loggedIn');
+        } else {
+          buttonFacebookElement.innerHTML = 'Continue with Facebook';
+          buttonFacebookElement.classList.remove('loggedIn');
+        }
+      }
+        
+      function loginApple() {
+        const buttonAppleElement = document.querySelector('.logAppleLink');
+
+        if (buttonAppleElement.innerText === 'Continue with Apple') {
+          buttonAppleElement.innerHTML = 'Logged in with Apple';
+          buttonAppleElement.classList.add('loggedIn');
+        } else {
+          buttonAppleElement.innerHTML = 'Continue with Apple';
+          buttonAppleElement.classList.remove('loggedIn');
+        }
+      }
+
+      function loginDetails() {
+        let inputElement = document.querySelector('.jsUsername');
+        let user = inputElement.value;
+
+        let passwordElement = document.querySelector('.jsPassword');
+        let password = passwordElement.value;
+
+        document.querySelector('.loginDetails')
+         .innerHTML = `Username: ${user}\n
+          Password: ${password}`;
+      }
+
+      
+    </script>
+  </body>
+</html>
